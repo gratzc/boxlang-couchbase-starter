@@ -1,0 +1,9 @@
+{
+    "name":"BoxLang Couchbase Starter",
+    "slug":"boxlang",
+    "version":"1.0.0-snapshot",
+    "type":"boxlang-engines",
+    "description":"BoxLang Couchbase Starter using the Java SDK",
+    "createPackageDirectory":false,
+    "listed":true
+}

@@ -1,0 +1,8 @@
+class {
+
+	this.javaSettings = {
+		loadPaths = [ "./lib" ],
+		reloadOnChange = false
+	}
+
+}

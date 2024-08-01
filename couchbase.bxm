@@ -1,0 +1,9 @@
+<bx:set cbs = createObject('component','couchbase')><!---  create a variable for our class --->
+
+<h1>
+	Hello Couchbase
+</h1>
+<p>
+	Thanks for upserting and then retrieving the name:
+	<b><bx:output>#cbs.main()#</bx:output></b>
+</p>

@@ -1,0 +1,32 @@
+import java:com.couchbase.client.java.Cluster;
+import java:java.time.Duration
+
+class Couchbase {
+	// Update these variables to point to your Couchbase Server instance and credentials.
+	connectionString = "couchbase://your-server-address";
+	username = "your-username";
+	password = "your-password";
+	bucketName = "your-bucket-name";
+
+
+	function main() {
+
+		cl = Cluster.connect(connectionString, username, password);
+
+		// get a bucket reference
+		b = cl.bucket(bucketName);
+		b.waitUntilReady(Duration.ofSeconds(10));
+		collection = b.defaultCollection();
+
+		// Upsert Document
+		upsertResult = collection.upsert(
+				"my-document",
+				{"name":"Curt Gratz"}
+		);
+
+		// Get Document
+		getResult = collection.get("my-document");
+		name = getResult.contentAsObject().getString("name");
+		return name; // name == "Curt Gratz"
+	}
+}

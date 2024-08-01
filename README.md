@@ -21,7 +21,7 @@ Start a BoxLang server using CommandBox:
 ### Retrieving Couchbase Jars:
 
 Since BoxLang integrates Java libraries, we'll need the Couchbase Java client JARs. Download them from a repository like https://jar-download.com/ and extract them into a lib directory within your BoxLang project.  I
-got them from https://jar-download.com/artifacts/com.couchbase.client/java-client
+got them from https://jar-download.com/artifacts/com.couchbase.client/java-client  (one caveat is to remove the slf4j-api-1.7.36.jar jar file because its included with the BoxLang thus not needed or it will cause conflicts)
 
 
 ### Enabling Java Classpath:
